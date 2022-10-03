@@ -70,3 +70,25 @@ document.getElementById('totall-player-cost').addEventListener('click', function
 
 })
 
+document.getElementById('btn-total-calculate').addEventListener('click', function totall(totalPlayerExpense) {
+    const managerCost = document.getElementById('manager-cost');
+    const managerCostString = managerCost.value;
+    const manager = parseFloat(managerCostString);
+
+    const coachCost = document.getElementById('coach-cost');
+    const coachCostString= coachCost.value;
+    const coach = parseFloat(coachCostString);
+
+    const cost = manager + coach + 5000;
+
+
+    const allCost = document.getElementById('all-cost');
+    allCost.innerText = cost;
+
+
+    managerCost.value = '';
+    coachCost.value = '';
+})
+
+
+
