@@ -51,3 +51,22 @@ function selectFavPlayer(element) {
 
     
 }
+
+document.getElementById('totall-player-cost').addEventListener('click', function (cost) {
+    const perPlayerCost = document.getElementById('per-player-cost');
+    const perPlayerCostString = perPlayerCost.value;
+    const onePlayerConst = parseFloat(perPlayerCostString);
+    console.log(perPlayerCostString);
+
+    const totalPlayerExpense = document.getElementById('total-player-expense');
+    totalPlayerExpense.innerText = onePlayerConst * 5;
+
+
+    perPlayerCost.value = '';
+
+
+    return totalPlayerExpense;
+
+
+})
+
